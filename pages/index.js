@@ -1,10 +1,17 @@
 import Head from "next/head";
-import Image from "next/image";
+import Sidebar from "../components/Sidebar";
 
 export default function Home() {
 	return (
-		<div>
-			<h1 className="flex text-sm">Hello World</h1>
+		<div className="bg-black h-screen overflow-hidden">
+			<Head>
+				<title>spotify 2.0</title>
+			</Head>
+			<main className="">
+				<Sidebar />
+				{/* Center */}
+			</main>
+			<div>{/* player */}</div>
 		</div>
 	);
 }
