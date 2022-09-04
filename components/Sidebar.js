@@ -13,17 +13,16 @@ function Sidebar() {
 	const { data: session, status } = useSession();
 	console.log(`SESSION :{${session}}`);
 
-	const PlayLists = Array(10).fill("Playlist name...");
+	const PlayLists = Array(20).fill("Playlist name...");
 
 	return (
-		<div className="text-gray-500 p-5 text-sm border-r border-gray-900 ">
+		<div className="text-gray-500 p-5 text-sm border-r border-gray-900 overflow-y-scroll h-screen scrollbar-hide">
 			<div className="space-y-4">
 				<div className="core__buttons space-y-4">
 					<button
-						className="flex items-center space-x-2 hover:text-white"
+						className="flex items-center space-x-2 hover:text-red-300 text-red-600"
 						onClick={() => signOut()}
 					>
-						<HomeIcon className="h-5 w-5" />
 						<p>Logout</p>
 					</button>
 					<button className="flex items-center space-x-2 hover:text-white">
